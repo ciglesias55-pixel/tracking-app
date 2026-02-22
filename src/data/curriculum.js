@@ -298,5 +298,31 @@ export const curriculum = [
         description: "Librería gratuita para detectar y anonimizar datos personales (PII/PHI) en texto e imágenes."
       }
     ]
+  },
+  {
+    id: 'live-news-radar',
+    title: '📡 Radar de Novedades (Live 2026+)',
+    description: 'Mantente al día con los últimos descubrimientos, modelos y noticias de IA. Usa la lupa aquí para buscar la actualidad de esta misma semana.',
+    icon: '📰',
+    topics: [
+      { id: 'news-llm', title: 'Últimos Modelos Fundacionales (OpenAI, Google, Anthropic)', completed: false },
+      { id: 'news-med', title: 'Novedades y Papers Recientes en IA Médica', completed: false },
+      { id: 'news-tools', title: 'Nuevas Herramientas y Frameworks de Desarrollo', completed: false },
+      { id: 'proj-news', title: '💻 Proyecto: Configurar alertas automáticas (Custom RSS/n8n) para un nicho médico', completed: false },
+    ],
+    resources: [
+      {
+        name: "The Rundown AI",
+        type: "Newsletter",
+        link: "https://www.therundown.ai/",
+        description: "El boletín de noticias de IA más leído para enterarte en 5 minutos de lo que salió ayer."
+      },
+      {
+        name: "Hugging Face Daily Papers",
+        type: "Investigación",
+        link: "https://huggingface.co/papers",
+        description: "Los papers científicos de IA más populares y disruptivos publicados en las últimas 24 horas."
+      }
+    ]
   }
 ];
