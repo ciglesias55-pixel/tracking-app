@@ -160,12 +160,19 @@ export const curriculum = [
     description: 'Acelera tu desarrollo usando agentes programadores y copilot.',
     icon: '💻',
     topics: [
+      { id: 'python-basics', title: 'Fundamentos de Python para Scripting Médico', completed: false },
       { id: 'cursor-ide', title: 'Dominando Cursor IDE y Composer', completed: false },
       { id: 'prompt-engineering', title: 'Prompting para Código (Zero-shot, Few-shot)', completed: false },
       { id: 'github-copilot', title: 'Flujos avanzados con GitHub Copilot / Devin', completed: false },
       { id: 'proj-cursor', title: '💻 Proyecto: Crear un Dashboard Clínico funcional en React usando Cursor', completed: false },
     ],
     resources: [
+      {
+        name: "Python for Beginners",
+        type: "Curso Gratuito",
+        link: "https://www.youtube.com/watch?v=kqtD5dpn9C8",
+        description: "Curso intensivo de 1 hora para entender las bases de Python."
+      },
       {
         name: "Cursor IDE",
         type: "Software",
@@ -213,11 +220,18 @@ export const curriculum = [
     icon: '🧠',
     topics: [
       { id: 'context-design', title: 'Diseño de Contexto Dinámico y Grounding', completed: false },
+      { id: 'mcp-protocol', title: 'Model Context Protocol (MCP) para Integración de Datos', completed: false },
       { id: 'ai-evals', title: 'Métricas de Evaluación y Pruebas A/B para IA', completed: false },
       { id: 'inference-opt', title: 'Optimización de Inferencia y Costos', completed: false },
       { id: 'proj-eval', title: '💻 Proyecto: Pruebas A/B sistemáticas (Evals) en prompts de pre-diagnóstico', completed: false },
     ],
     resources: [
+      {
+        name: "MCP Documentation",
+        type: "Estándar Oficial",
+        link: "https://modelcontextprotocol.io/",
+        description: "Aprende cómo MCP conecta modelos de IA (como Claude) con fuentes de datos vivas."
+      },
       {
         name: "Anthropic Prompt Engineering",
         type: "Documentación",
