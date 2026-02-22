@@ -8,6 +8,7 @@ export const curriculum = [
       { id: 'tools', title: 'Uso de Herramientas y Llamadas a Funciones', completed: false },
       { id: 'planning', title: 'Algoritmos de Planificación (ReAct, TOT)', completed: false },
       { id: 'memory', title: 'Memoria a Largo Plazo y Bases de Datos Vectoriales', completed: false },
+      { id: 'proj-agent', title: '💻 Proyecto: Agente ReAct simple para triaje automatizado', completed: false },
     ],
     resources: [
       {
@@ -39,6 +40,7 @@ export const curriculum = [
       { id: 'rag-advanced', title: 'Patrones Avanzados de RAG', completed: false },
       { id: 'dspy', title: 'DSPy y Optimización de Prompts', completed: false },
       { id: 'slm', title: 'Fine-tuning de Modelos Pequeños (SLMs)', completed: false },
+      { id: 'proj-slm', title: '💻 Proyecto: Fine-tuning de SLM con historiales médicos sintéticos', completed: false },
     ],
     resources: [
       {
@@ -70,6 +72,7 @@ export const curriculum = [
       { id: 'vision', title: 'Modelos de Visión-Lenguaje (VLM)', completed: false },
       { id: 'audio', title: 'Interacción Voz a Voz', completed: false },
       { id: 'video', title: 'Generación y Análisis de Video', completed: false },
+      { id: 'proj-vision', title: '💻 Proyecto: Analizador multimodal de radiografías (Pipeline visual)', completed: false },
     ],
     resources: [
       {
@@ -101,6 +104,8 @@ export const curriculum = [
       { id: 'observability', title: 'Observabilidad y Trazabilidad de LLM', completed: false },
       { id: 'security', title: 'Defensa contra Inyección de Prompts', completed: false },
       { id: 'ethics', title: 'Detección y Mitigación de Sesgos', completed: false },
+      { id: 'economics', title: 'Economía de la IA en Salud: Costes de Inferencia (Tokens) y ROI', completed: false },
+      { id: 'proj-ops', title: '💻 Proyecto: Implementar LangSmith para auditar sesgos en un bot clínico', completed: false },
     ],
     resources: [
       {
@@ -132,6 +137,7 @@ export const curriculum = [
       { id: 'make-n8n', title: 'Workflows Visuales (Make/n8n + AI)', completed: false },
       { id: 'custom-gpt', title: 'Creación de Custom GPTs con Acciones', completed: false },
       { id: 'web-scraping', title: 'Extracción de Datos y Web Scraping con IA', completed: false },
+      { id: 'proj-n8n', title: '💻 Proyecto: Flujo n8n que extrae alarmas HL7 o emails médicos críticos', completed: false },
     ],
     resources: [
       {
@@ -157,6 +163,7 @@ export const curriculum = [
       { id: 'cursor-ide', title: 'Dominando Cursor IDE y Composer', completed: false },
       { id: 'prompt-engineering', title: 'Prompting para Código (Zero-shot, Few-shot)', completed: false },
       { id: 'github-copilot', title: 'Flujos avanzados con GitHub Copilot / Devin', completed: false },
+      { id: 'proj-cursor', title: '💻 Proyecto: Crear un Dashboard Clínico funcional en React usando Cursor', completed: false },
     ],
     resources: [
       {
@@ -182,6 +189,7 @@ export const curriculum = [
       { id: 'vector-dbs', title: 'Bases de Datos Vectoriales en Producción (Pinecone, Weaviate)', completed: false },
       { id: 'data-pipelines', title: 'Pipelines de Ingesta y Limpieza de Datos No Estructurados', completed: false },
       { id: 'feature-stores', title: 'Feature Stores y Gestión de Metadatos', completed: false },
+      { id: 'proj-data', title: '💻 Proyecto: RAG Vectorial indexando 50 papers de PubMed (Pinecone)', completed: false },
     ],
     resources: [
       {
@@ -207,6 +215,7 @@ export const curriculum = [
       { id: 'context-design', title: 'Diseño de Contexto Dinámico y Grounding', completed: false },
       { id: 'ai-evals', title: 'Métricas de Evaluación y Pruebas A/B para IA', completed: false },
       { id: 'inference-opt', title: 'Optimización de Inferencia y Costos', completed: false },
+      { id: 'proj-eval', title: '💻 Proyecto: Pruebas A/B sistemáticas (Evals) en prompts de pre-diagnóstico', completed: false },
     ],
     resources: [
       {
@@ -232,6 +241,7 @@ export const curriculum = [
       { id: 'medical-imaging', title: 'Análisis de Imágenes Médicas con IA (Rayos X, RM)', completed: false },
       { id: 'clinical-nlp', title: 'Procesamiento de Lenguaje Natural en Historiales Clínicos (Clinical NLP)', completed: false },
       { id: 'drug-discovery', title: 'Descubrimiento de Fármacos y Predicción de Proteínas (AlphaFold)', completed: false },
+      { id: 'proj-med', title: '💻 Proyecto Final: Arquitectura de un Asistente Médico Copilot Integrado', completed: false },
     ],
     resources: [
       {
@@ -257,6 +267,8 @@ export const curriculum = [
       { id: 'ai-act-eu', title: 'La Ley de IA (AI Act) Aplicada a Productos Sanitarios', completed: false },
       { id: 'hipaa-gdpr', title: 'HIPAA, GDPR y Anonimización de Datos Médicos', completed: false },
       { id: 'secure-deploy', title: 'Despliegues Seguros On-Premise vs Cloud en Hospitales', completed: false },
+      { id: 'clinical-liability', title: 'Auditoría Clínica de la IA y Responsabilidad Civil Médica', completed: false },
+      { id: 'proj-legal', title: '💻 Proyecto: Pipeline de anonimización de PiI médica usando Presidio', completed: false },
     ],
     resources: [
       {
