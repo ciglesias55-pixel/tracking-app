@@ -300,6 +300,86 @@ export const curriculum = [
     ]
   },
   {
+    id: 'synthetic-data',
+    title: 'Datos Sintéticos Médicos',
+    description: 'Entrena modelos con pacientes ficticios realistas cuando los datos reales no están disponibles por privacidad.',
+    icon: '🧬',
+    topics: [
+      { id: 'synth-synthea', title: 'Generación de Pacientes Sintéticos con Synthea', completed: false },
+      { id: 'synth-anon', title: 'Técnicas de Anonimización y Desidentificación de Datos', completed: false },
+      { id: 'synth-eval', title: 'Validación de Calidad de Datos Sintéticos (Fidelity vs Privacy)', completed: false },
+      { id: 'proj-synth', title: '💻 Proyecto: Generar cohorte de 1.000 pacientes diabéticos sintéticos y entrenar un modelo predictivo de HbA1c', completed: false },
+    ],
+    resources: [
+      {
+        name: "Synthea",
+        type: "Herramienta",
+        link: "https://synthetichealth.github.io/synthea",
+        description: "Generador open-source de historiales médicos sintéticos realistas usado por el MIT y la FDA."
+      },
+      {
+        name: "SDV – Synthetic Data Vault",
+        type: "Librería Python",
+        link: "https://sdv.dev",
+        description: "Framework del MIT para generar datos tabulares sintéticos con privacidad diferencial."
+      }
+    ]
+  },
+  {
+    id: 'clinical-deployment',
+    title: 'Despliegue Real en Producción',
+    description: 'La diferencia entre un prototipo y algo que funciona en un hospital. Empaqueta y despliega tus modelos de IA.',
+    icon: '🚀',
+    topics: [
+      { id: 'deploy-fastapi', title: 'APIs con FastAPI para Modelos de IA', completed: false },
+      { id: 'deploy-docker', title: 'Contenedores Docker para IA Clínica', completed: false },
+      { id: 'deploy-cicd', title: 'CI/CD para Modelos de IA – MLOps básico con GitHub Actions', completed: false },
+      { id: 'deploy-infra', title: 'On-Premise vs Cloud Híbrido en la Práctica Hospitalaria', completed: false },
+      { id: 'proj-deploy', title: '💻 Proyecto: Desplegar el asistente médico como API en Docker accesible desde el navegador', completed: false },
+    ],
+    resources: [
+      {
+        name: "FastAPI",
+        type: "Framework",
+        link: "https://fastapi.tiangolo.com",
+        description: "El framework más usado para servir modelos de IA en Python. Rápido, moderno y con documentación automática."
+      },
+      {
+        name: "MLflow",
+        type: "MLOps",
+        link: "https://mlflow.org",
+        description: "Tracking de experimentos, registro y despliegue de modelos. Estándar en entornos hospitalarios."
+      }
+    ]
+  },
+  {
+    id: 'clinical-evaluation',
+    title: 'Evaluación Clínica de Modelos IA',
+    description: 'No basta con accuracy alta. Aprende a demostrar que tu modelo es seguro y válido para usar con pacientes reales.',
+    icon: '📊',
+    topics: [
+      { id: 'eval-metrics', title: 'Métricas Clínicas vs Técnicas (AUC-ROC, Sensibilidad, Especificidad)', completed: false },
+      { id: 'eval-validation', title: 'Validación Prospectiva y Estudios Clínicos de IA (FDA, CE)', completed: false },
+      { id: 'eval-fairness', title: 'Análisis de Subgrupos y Equidad Algorítmica en Salud', completed: false },
+      { id: 'eval-explain', title: 'Explicabilidad Clínica con SHAP y LIME', completed: false },
+      { id: 'proj-eval-clin', title: '💻 Proyecto: Auditoría de equidad y explicabilidad de un modelo de predicción de reingreso hospitalario', completed: false },
+    ],
+    resources: [
+      {
+        name: "SHAP",
+        type: "Librería Python",
+        link: "https://shap.readthedocs.io",
+        description: "Estándar de facto para explicar predicciones de modelos de ML en contextos clínicos."
+      },
+      {
+        name: "Aequitas (U. Chicago)",
+        type: "Herramienta",
+        link: "https://github.com/dssg/aequitas",
+        description: "Auditoría de sesgos en modelos de IA con métricas de equidad para salud pública."
+      }
+    ]
+  },
+  {
     id: 'live-news-radar',
     title: '📡 Radar de Novedades (Live 2026+)',
     description: 'Mantente al día con los últimos descubrimientos, modelos y noticias de IA. Usa la lupa aquí para buscar la actualidad de esta misma semana.',
