@@ -55,8 +55,8 @@ const ModuleCard = ({ module, onToggleTopic }) => {
                                 cursor: 'pointer',
                                 padding: '0.8rem',
                                 borderRadius: '8px',
-                                background: topic.completed ? 'rgba(0, 210, 255, 0.1)' : 'rgba(255,255,255,0.05)',
-                                border: topic.completed ? '1px solid rgba(0, 210, 255, 0.3)' : '1px solid transparent',
+                                background: topic.completed ? 'rgba(57, 255, 20, 0.1)' : 'rgba(255,255,255,0.05)',
+                                border: topic.completed ? '1px solid rgba(57, 255, 20, 0.3)' : '1px solid transparent',
                                 transition: 'all 0.2s',
                                 flex: 1
                             }}
@@ -68,8 +68,9 @@ const ModuleCard = ({ module, onToggleTopic }) => {
                                 style={{ accentColor: 'var(--accent-color)', width: '1.2rem', height: '1.2rem' }}
                             />
                             <span style={{
-                                textDecoration: topic.completed ? 'line-through' : 'none',
-                                color: topic.completed ? 'var(--text-secondary)' : 'var(--text-primary)'
+                                textDecoration: 'none',
+                                color: topic.completed ? '#39FF14' : 'var(--text-primary)',
+                                fontWeight: topic.completed ? '600' : 'normal'
                             }}>
                                 {topic.title}
                             </span>
