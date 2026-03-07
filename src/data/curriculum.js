@@ -718,6 +718,60 @@ export const curriculum = [
     ]
   },
   {
+    "id": "project-management",
+    "title": "Gestión de Proyectos y Mapas Mentales",
+    "description": "Organiza tus ideas y proyectos médicos con herramientas visuales y metodologías ágiles asistidas por IA.",
+    "icon": "🗺️",
+    "topics": [
+      {
+        "id": "mind-mapping",
+        "title": "Mapas Mentales para Proyectos Médicos (XMind, MindMeister)",
+        "completed": false
+      },
+      {
+        "id": "trello-basics",
+        "title": "Domina Trello: Organización de Tareas y Tableros Kanban",
+        "completed": false
+      },
+      {
+        "id": "ai-project-structure",
+        "title": "Uso de IA para Estructurar Proyectos y Desglose de Tareas",
+        "completed": false
+      },
+      {
+        "id": "proj-management",
+        "title": "💻 Proyecto: Crear un tablero de Trello para un proyecto de investigación con IA",
+        "completed": false
+      }
+    ],
+    "resources": [
+      {
+        "name": "Trello 101: Full Guide for Beginners",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=xky48zyL9iA",
+        "description": "Aprende a usar Trello desde cero para organizar cualquier tipo de proyecto médico o personal."
+      },
+      {
+        "name": "Mind Mapping for Scientists & Researchers",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=kYNooN289O8",
+        "description": "Cómo usar mapas mentales para estructurar tesis, papers o nuevos proyectos de software clínico."
+      },
+      {
+        "name": "XMind: The Most Popular Mind Mapping Tool",
+        "type": "Herramienta (Gratis)",
+        "link": "https://xmind.app/",
+        "description": "Software profesional para crear mapas mentales estructurados y visualmente potentes."
+      },
+      {
+        "name": "Trello Official Guide",
+        "type": "Guía Oficial (Gratis)",
+        "link": "https://trello.com/guide",
+        "description": "Manual paso a paso de Atlassian para dominar los tableros, listas y tarjetas de Trello."
+      }
+    ]
+  },
+  {
     "id": "live-news-radar",
     "title": "📡 Radar de Novedades (Live 2026+)",
     "description": "Mantente al día con los últimos descubrimientos, modelos y noticias de IA. Usa la lupa aquí para buscar la actualidad de esta misma semana.",
