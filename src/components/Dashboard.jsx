@@ -149,7 +149,7 @@ const Dashboard = ({ user }) => {
                 fontSize: '0.9rem',
                 color: 'var(--text-secondary)'
             }}>
-                <span>Dr. {user?.email}</span>
+                <span>Dr. {user?.displayName || user?.email}</span>
                 <button
                     onClick={() => signOut(auth)}
                     style={{
@@ -262,7 +262,7 @@ const Dashboard = ({ user }) => {
 
                             <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 2rem', gap: '1rem', flexWrap: 'wrap' }}>
                                 <div style={{ minWidth: '150px' }}>
-                                    <div style={{ borderBottom: '1px solid #FFD700', paddingBottom: '0.5rem', marginBottom: '0.5rem', fontStyle: 'italic', color: '#fff', fontSize: '1.2rem' }}>Generado O.</div>
+                                    <div style={{ borderBottom: '1px solid #FFD700', paddingBottom: '0.5rem', marginBottom: '0.5rem', fontStyle: 'italic', color: '#fff', fontSize: '1.2rem' }}>{user?.displayName || 'Alumno de Honor'}</div>
                                     <div style={{ fontSize: '0.8rem', color: '#FFD700', textTransform: 'uppercase', letterSpacing: '1px' }}>Estudiante de Honor</div>
                                 </div>
 

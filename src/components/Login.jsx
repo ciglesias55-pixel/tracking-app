@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { auth } from '../firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, updateProfile } from 'firebase/auth';
 
 const Login = ({ onLoginSuccess }) => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
@@ -14,7 +15,10 @@ const Login = ({ onLoginSuccess }) => {
         setError('');
         try {
             if (isRegistering) {
-                await createUserWithEmailAndPassword(auth, email, password);
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                await updateProfile(userCredential.user, {
+                    displayName: name
+                });
             } else {
                 await signInWithEmailAndPassword(auth, email, password);
             }
@@ -65,6 +69,16 @@ const Login = ({ onLoginSuccess }) => {
                 </p>
 
                 <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1.5rem' }}>
+                    {isRegistering && (
+                        <input
+                            type="text"
+                            placeholder="Nombre y Apellidos"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            className="glass-input"
+                        />
+                    )}
                     <input
                         type="email"
                         placeholder="Email"
