@@ -6,8 +6,16 @@ const ModuleCard = ({ module, onToggleTopic }) => {
     const [searchMenuOpen, setSearchMenuOpen] = React.useState(null);
 
     const handleSearch = (topicTitle, lang) => {
-        const query = lang === 'es' ? `${topicTitle} tutorial español ia` : `${topicTitle} ai tutorial`;
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+        let query = '';
+        let url = '';
+        if (lang === 'es') {
+            query = `"${topicTitle}" curso tutorial paso a paso avanzado`;
+            url = `https://www.google.com/search?q=${encodeURIComponent(query)}&hl=es&lr=lang_es&tbs=qdr:y`;
+        } else {
+            query = `"${topicTitle}" best full tutorial course`;
+            url = `https://www.google.com/search?q=${encodeURIComponent(query)}&hl=en&lr=lang_en&tbs=qdr:y`;
+        }
+        window.open(url, '_blank');
         setSearchMenuOpen(null);
     };
 
