@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Remplazar estos valores con los que te dé Firebase en la consola
 // Estos son marcadores de posición (placeholders)
 const firebaseConfig = {
-    apiKey: "REPLACE_WITH_YOUR_API_KEY",
-    authDomain: "REPLACE_WITH_YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "REPLACE_WITH_YOUR_PROJECT_ID",
-    storageBucket: "REPLACE_WITH_YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "REPLACE_WITH_YOUR_SENDER_ID",
-    appId: "REPLACE_WITH_YOUR_APP_ID"
+    apiKey: "AIzaSyDPCZ2f2hX6v5ybs-aW16T7we55wLOy9pA",
+    authDomain: "fellowship-bisvo.firebaseapp.com",
+    projectId: "fellowship-bisvo",
+    storageBucket: "fellowship-bisvo.firebasestorage.app",
+    messagingSenderId: "330674425508",
+    appId: "1:330674425508:web:6c0a19a1d8ef8a6f21a031"
 };
 
 // Initialize Firebase
