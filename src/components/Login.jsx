@@ -46,6 +46,19 @@ const Login = ({ onLoginSuccess }) => {
                 maxWidth: '450px',
                 textAlign: 'center'
             }}>
+                <img
+                    src="/src/assets/carlos-ai-agent-login.png"
+                    alt="Dr. Carlos Iglesias - AI Medical Leader"
+                    style={{
+                        width: '120px',
+                        height: '120px',
+                        borderRadius: '50%',
+                        objectFit: 'cover',
+                        marginBottom: '1rem',
+                        border: '3px solid var(--accent-color)',
+                        boxShadow: '0 0 20px rgba(0, 210, 255, 0.4)'
+                    }}
+                />
                 <h1 style={{ marginBottom: '0.5rem', fontSize: '2.5rem' }}>Fellowship Bisvo</h1>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
                     Tu Academia Médica de IA Nivel 2026
