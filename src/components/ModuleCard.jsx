@@ -138,55 +138,82 @@ const ModuleCard = ({ module, onToggleTopic }) => {
 
             <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1rem' }}>
                 <h4 style={{ margin: '0 0 1rem 0', fontSize: '0.9rem', color: 'var(--accent-color)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    📚 Recursos Recomendados
+                    📚 Recursos Seleccionados
                 </h4>
-                <div style={{ display: 'grid', gap: '0.8rem' }}>
-                    {module.resources && module.resources.map((res, idx) => (
-                        <div key={idx} style={{
-                            background: 'rgba(255,255,255,0.03)',
-                            padding: '0.8rem',
-                            borderRadius: '8px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0.4rem'
-                        }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{res.name}</span>
-                                <span style={{
-                                    fontSize: '0.75rem',
-                                    background: 'rgba(255,255,255,0.1)',
-                                    padding: '0.2rem 0.6rem',
-                                    borderRadius: '12px'
-                                }}>{res.type}</span>
-                            </div>
 
-                            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                                {res.description}
-                            </p>
-
-                            <a
-                                href={res.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    alignSelf: 'flex-start',
-                                    marginTop: '0.4rem',
-                                    fontSize: '0.8rem',
-                                    color: 'var(--accent-color)',
-                                    textDecoration: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '0.3rem'
-                                }}
-                            >
-                                Visitar sitio web →
-                            </a>
+                {/* Spanish Resources */}
+                {module.resources && module.resources.filter(r => r.lang === 'es').length > 0 && (
+                    <div style={{ marginBottom: '1.5rem' }}>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <span>🇪🇸</span> EN ESPAÑOL
                         </div>
-                    ))}
-                </div>
+                        <div style={{ display: 'grid', gap: '0.8rem' }}>
+                            {module.resources.filter(r => r.lang === 'es').map((res, idx) => (
+                                <ResourceItem key={idx} res={res} />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* English Resources */}
+                {module.resources && module.resources.filter(r => r.lang === 'en').length > 0 && (
+                    <div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <span>🇺🇸</span> PREMIUM ENGLISH RESOURCES
+                        </div>
+                        <div style={{ display: 'grid', gap: '0.8rem' }}>
+                            {module.resources.filter(r => r.lang === 'en').map((res, idx) => (
+                                <ResourceItem key={idx} res={res} />
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
 };
+
+const ResourceItem = ({ res }) => (
+    <div style={{
+        background: 'rgba(255,255,255,0.03)',
+        padding: '0.8rem',
+        borderRadius: '8px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.4rem'
+    }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{res.name}</span>
+            <span style={{
+                fontSize: '0.75rem',
+                background: 'rgba(255,255,255,0.1)',
+                padding: '0.2rem 0.6rem',
+                borderRadius: '12px'
+            }}>{res.type}</span>
+        </div>
+
+        <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            {res.description}
+        </p>
+
+        <a
+            href={res.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                alignSelf: 'flex-start',
+                marginTop: '0.4rem',
+                fontSize: '0.8rem',
+                color: 'var(--accent-color)',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.3rem'
+            }}
+        >
+            Visitar recurso →
+        </a>
+    </div>
+);
 
 export default ModuleCard;

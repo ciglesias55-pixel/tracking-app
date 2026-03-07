@@ -36,31 +36,36 @@ export const curriculum = [
         "name": "Python for Beginners - Full Course",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=eWRfhZUzrAc",
-        "description": "Curso completo y gratuito de FreeCodeCamp (más de 40M de visitas) para aprender Python desde absoluto cero."
+        "description": "Curso completo y gratuito de FreeCodeCamp (más de 40M de visitas) para aprender Python desde absoluto cero.",
+        "lang": "en"
       },
       {
         "name": "Cursor IDE: Complete AI Developer Guide",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=cursor+ide+full+tutorial+course",
-        "description": "Búsqueda directa de los mejores tutoriales en YouTube sobre cómo configurar Cursor para programar aplicaciones completas."
+        "description": "Búsqueda directa de los mejores tutoriales en YouTube sobre cómo configurar Cursor para programar aplicaciones completas.",
+        "lang": "en"
       },
       {
         "name": "Harvard CS50P: Introducción a Python",
         "type": "Curso Universitario (Gratis)",
         "link": "https://cs50.harvard.edu/python/",
-        "description": "El estándar de oro mundial. Enseñado por David J. Malan, es la mejor forma gratuita de asentar bases sólidas de programación computacional para médicos."
+        "description": "El estándar de oro mundial. Enseñado por David J. Malan, es la mejor forma gratuita de asentar bases sólidas de programación computacional para médicos.",
+        "lang": "en"
       },
       {
         "name": "Cursor Directory",
         "type": "Directorio Público (Gratis)",
         "link": "https://cursor.directory/",
-        "description": "Una biblioteca abierta de reglas de comportamiento (System Prompts) para configurar Cursor y que programe como un experto en React, Python o HL7."
+        "description": "Una biblioteca abierta de reglas de comportamiento (System Prompts) para configurar Cursor y que programe como un experto en React, Python o HL7.",
+        "lang": "es"
       },
       {
         "name": "Pair Programming con un LLM",
         "type": "Curso DeepLearning.AI (Gratis)",
         "link": "https://www.deeplearning.ai/short-courses/pair-programming-llm/",
-        "description": "Curso gratuito de 1 hora de Andrew Ng sobre cómo dividir la lógica de un problema para que la Inteligencia Artificial te escriba el código sin errores."
+        "description": "Curso gratuito de 1 hora de Andrew Ng sobre cómo dividir la lógica de un problema para que la Inteligencia Artificial te escriba el código sin errores.",
+        "lang": "es"
       }
     ]
   },
@@ -101,25 +106,29 @@ export const curriculum = [
         "name": "n8n Crash Course for Beginners",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=1_N9JcEw-4c",
-        "description": "Guía visual rápida en YouTube sobre cómo conectar aplicaciones y automatizar tareas sin escribir código usando n8n."
+        "description": "Guía visual rápida en YouTube sobre cómo conectar aplicaciones y automatizar tareas sin escribir código usando n8n.",
+        "lang": "en"
       },
       {
         "name": "OpenAI Assistants API Masterclass",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=openai+assistants+api+tutorial+python",
-        "description": "Tutoriales en vídeo para construir agentes médicos que pueden recordar conversaciones y usar herramientas externas."
+        "description": "Tutoriales en vídeo para construir agentes médicos que pueden recordar conversaciones y usar herramientas externas.",
+        "lang": "en"
       },
       {
         "name": "n8n Academy: Curso de Principiantes",
         "type": "Academia Oficial (Gratis)",
         "link": "https://academy.n8n.io/paths/beginners",
-        "description": "Ruta paso a paso gratuita para aprender a construir nodos, conectar APIs en la nube e automatizar procesos que te ahorren horas a la semana."
+        "description": "Ruta paso a paso gratuita para aprender a construir nodos, conectar APIs en la nube e automatizar procesos que te ahorren horas a la semana.",
+        "lang": "es"
       },
       {
         "name": "OpenAI Cookbook: Assistants",
         "type": "Recetario de Código (Gratis)",
         "link": "https://cookbook.openai.com/examples/assistants_api_overview_python",
-        "description": "La guía técnica oficial (con código copiable) proporcionada por OpenAI para crear un 'Asistente Médico' en Python con capacidad de llamar a herramientas."
+        "description": "La guía técnica oficial (con código copiable) proporcionada por OpenAI para crear un 'Asistente Médico' en Python con capacidad de llamar a herramientas.",
+        "lang": "es"
       }
     ]
   },
@@ -155,19 +164,22 @@ export const curriculum = [
         "name": "GPT-4 Vision & Audio API in Python",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=gpt4+vision+audio+api+python+tutorial",
-        "description": "Aprende paso a paso en YouTube cómo enviar radiografías o notas de voz a los modelos de lenguaje a través de código."
+        "description": "Aprende paso a paso en YouTube cómo enviar radiografías o notas de voz a los modelos de lenguaje a través de código.",
+        "lang": "en"
       },
       {
         "name": "OpenAI Vision Cookbook",
         "type": "Recetario Práctico (Gratis)",
         "link": "https://cookbook.openai.com/examples/using_gpt4_vision_with_the_assistants_api",
-        "description": "Tutorial gratuito sobre cómo adjuntarle radiografías o informes escaneados al modelo para que los interprete como si tuviera 'ojos'."
+        "description": "Tutorial gratuito sobre cómo adjuntarle radiografías o informes escaneados al modelo para que los interprete como si tuviera 'ojos'.",
+        "lang": "es"
       },
       {
         "name": "Building Multimodal Apps",
         "type": "Curso DeepLearning.AI (Gratis)",
         "link": "https://www.deeplearning.ai/short-courses/building-multimodal-applications-with-gradio/",
-        "description": "Crea interfaces web simples sin pagar un duro para subir imágenes médicas y notas de voz y conectarlas a modelos grandes."
+        "description": "Crea interfaces web simples sin pagar un duro para subir imágenes médicas y notas de voz y conectarlas a modelos grandes.",
+        "lang": "es"
       }
     ]
   },
@@ -203,31 +215,36 @@ export const curriculum = [
         "name": "Let's build GPT: from scratch, in code",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
-        "description": "La legendaria clase magistral de Andrej Karpathy (ex-director de IA en Tesla) construyendo un Transformer neuronal desde cero."
+        "description": "La legendaria clase magistral de Andrej Karpathy (ex-director de IA en Tesla) construyendo un Transformer neuronal desde cero.",
+        "lang": "en"
       },
       {
         "name": "LangChain & Vector Databases Full Course",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=TRjq7t2Ms5I",
-        "description": "Curso masivo de FreeCodeCamp (18 horas) enseñando paso a paso arquitectura RAG para conectar LLMs con documentos privados."
+        "description": "Curso masivo de FreeCodeCamp (18 horas) enseñando paso a paso arquitectura RAG para conectar LLMs con documentos privados.",
+        "lang": "en"
       },
       {
         "name": "Hugging Face NLP Course",
         "type": "Curso Magistral (Gratis)",
         "link": "https://huggingface.co/learn/nlp-course/",
-        "description": "El curso más exhaustivo y pedagógico, totalmente gratuito, sobre cómo funcionan los modelos Transformer y cómo afinar modelos open-source."
+        "description": "El curso más exhaustivo y pedagógico, totalmente gratuito, sobre cómo funcionan los modelos Transformer y cómo afinar modelos open-source.",
+        "lang": "es"
       },
       {
         "name": "Mastering RAG con LlamaIndex",
         "type": "Guía Definitiva (Gratis)",
         "link": "https://docs.llamaindex.ai/en/stable/optimizing/production_rag/",
-        "description": "El manual abierto para ingenieros sobre cómo hacer que RAG funcione en producción y no se invente información cuando busque entre mil PDFs médicos."
+        "description": "El manual abierto para ingenieros sobre cómo hacer que RAG funcione en producción y no se invente información cuando busque entre mil PDFs médicos.",
+        "lang": "es"
       },
       {
         "name": "DSPy Official Documentation",
         "type": "Framework Avanzado (Gratis)",
         "link": "https://dspy-docs.vercel.app/docs/intro",
-        "description": "Tecnología abierta de Stanford: en lugar de escribir prompts a mano, programas reglas matemáticas para que el modelo se optimice a sí mismo."
+        "description": "Tecnología abierta de Stanford: en lugar de escribir prompts a mano, programas reglas matemáticas para que el modelo se optimice a sí mismo.",
+        "lang": "es"
       }
     ]
   },
@@ -263,19 +280,22 @@ export const curriculum = [
         "name": "Synthetic Data Generation with Python",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=synthetic+data+generation+machine+learning+python",
-        "description": "Charlas y tutoriales técnicos explicando cómo usar GANs y VAEs para generar pacientes ficticios por motivos de privacidad."
+        "description": "Charlas y tutoriales técnicos explicando cómo usar GANs y VAEs para generar pacientes ficticios por motivos de privacidad.",
+        "lang": "en"
       },
       {
         "name": "Synthea: Pacientes Sintéticos (MIT)",
         "type": "Herramienta Open-Source (Gratis)",
         "link": "https://github.com/synthetichealth/synthea/wiki",
-        "description": "El simulador libre estándar mundial usado para generar historias clínicas realistas pero totalmente falsas (EHR), libre de proteger de datos."
+        "description": "El simulador libre estándar mundial usado para generar historias clínicas realistas pero totalmente falsas (EHR), libre de proteger de datos.",
+        "lang": "es"
       },
       {
         "name": "Synthetic Data Vault (SDV)",
         "type": "Librería Python MIT (Gratis)",
         "link": "https://docs.sdv.dev/sdv",
-        "description": "Inyecta datos reales de Cardiología a un algoritmo abierto para escupir gemelos sintéticos idénticos estadísticamente, pero 100% anónimos."
+        "description": "Inyecta datos reales de Cardiología a un algoritmo abierto para escupir gemelos sintéticos idénticos estadísticamente, pero 100% anónimos.",
+        "lang": "es"
       }
     ]
   },
@@ -311,31 +331,36 @@ export const curriculum = [
         "name": "AI in Healthcare (Stanford University)",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=l_B-mD1h03M",
-        "description": "Excelente material de Stanford Medicine sobre los retos reales de aplicar Machine Learning dentro de un hospital."
+        "description": "Excelente material de Stanford Medicine sobre los retos reales de aplicar Machine Learning dentro de un hospital.",
+        "lang": "en"
       },
       {
         "name": "AI for Medicine Course Overview",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=coursera+ai+for+medicine+specialization",
-        "description": "Vídeos explicativos y lecciones sueltas sobre las matemáticas de diagnosticar con imágenes y análisis de supervivencia."
+        "description": "Vídeos explicativos y lecciones sueltas sobre las matemáticas de diagnosticar con imágenes y análisis de supervivencia.",
+        "lang": "en"
       },
       {
         "name": "Coursera: AI for Medicine",
         "type": "Auditoría de Curso (Gratis)",
         "link": "https://www.coursera.org/specializations/ai-for-medicine",
-        "description": "Impartida por Pranav Rajpurkar (Harvard/Stanford). Puedes auditar los materiales gratis para aprender Inteligencia Artificial aplicada al diagnóstico clínico."
+        "description": "Impartida por Pranav Rajpurkar (Harvard/Stanford). Puedes auditar los materiales gratis para aprender Inteligencia Artificial aplicada al diagnóstico clínico.",
+        "lang": "es"
       },
       {
         "name": "NEJM AI",
         "type": "Revista Científica (Artículos Abiertos)",
         "link": "https://ai.nejm.org/",
-        "description": "La edición de IA de The New England Journal of Medicine. Publican a menudo artículos en abierto sobre el impacto clínico de la IA."
+        "description": "La edición de IA de The New England Journal of Medicine. Publican a menudo artículos en abierto sobre el impacto clínico de la IA.",
+        "lang": "es"
       },
       {
         "name": "Google Health Research Papers",
         "type": "Publicaciones Clínicas (Gratis)",
         "link": "https://health.google/health-research/",
-        "description": "La biblioteca pública de Google con todos sus hallazgos empíricos gratuitos de modelos como Med-PaLM interactuando con hospitales."
+        "description": "La biblioteca pública de Google con todos sus hallazgos empíricos gratuitos de modelos como Med-PaLM interactuando con hospitales.",
+        "lang": "es"
       }
     ]
   },
@@ -371,19 +396,22 @@ export const curriculum = [
         "name": "Vector Databases Explained in 5 Minutes",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=klTvEwg3oJ4",
-        "description": "Un resumen visual espectacular de Pinecone explicando por qué la IA necesita almacenar datos en formato de vectores matemáticos."
+        "description": "Un resumen visual espectacular de Pinecone explicando por qué la IA necesita almacenar datos en formato de vectores matemáticos.",
+        "lang": "en"
       },
       {
         "name": "Pinecone Vector Center",
         "type": "Conceptos Fundamentales (Gratis)",
         "link": "https://www.pinecone.io/learn/",
-        "description": "Material abierto para entender matemáticamente cómo un modelo de lenguaje traduce la palabra 'Glucosa' a un vector en el espacio."
+        "description": "Material abierto para entender matemáticamente cómo un modelo de lenguaje traduce la palabra 'Glucosa' a un vector en el espacio.",
+        "lang": "es"
       },
       {
         "name": "Unstructured.io Documentation",
         "type": "Librería de Ingesta (Open-Source)",
         "link": "https://unstructured-io.github.io/unstructured/",
-        "description": "Transformar PDFs ilegibles médicos a texto puro. Esta librería open-source es magia pura y gratuita para tus proyectos."
+        "description": "Transformar PDFs ilegibles médicos a texto puro. Esta librería open-source es magia pura y gratuita para tus proyectos.",
+        "lang": "es"
       }
     ]
   },
@@ -424,25 +452,29 @@ export const curriculum = [
         "name": "Andrew Ng: Agentic AI Workflows",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=sal78ACtGTc",
-        "description": "Charla imperdible del padre de la IA moderna explicando por qué cuatro agentes pequeños trabajando en equipo ganan a un LLM gigante."
+        "description": "Charla imperdible del padre de la IA moderna explicando por qué cuatro agentes pequeños trabajando en equipo ganan a un LLM gigante.",
+        "lang": "en"
       },
       {
         "name": "LangGraph Multi-Agent Workflows",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=langgraph+multi+agent+tutorial",
-        "description": "Búsqueda con los mejores vídeos para aprender a programar sistemas donde agentes debaten entre sí antes de dar una respuesta."
+        "description": "Búsqueda con los mejores vídeos para aprender a programar sistemas donde agentes debaten entre sí antes de dar una respuesta.",
+        "lang": "en"
       },
       {
         "name": "Building Effective Agents (Anthropic)",
         "type": "Paper de Arquitectura (Gratis)",
         "link": "https://www.anthropic.com/research/building-effective-agents",
-        "description": "El manifiesto abierto de Anthropic explicando qué patrones arquitectónicos multi-agente funcionan de verdad, con ejemplos en código."
+        "description": "El manifiesto abierto de Anthropic explicando qué patrones arquitectónicos multi-agente funcionan de verdad, con ejemplos en código.",
+        "lang": "es"
       },
       {
         "name": "LangGraph: Multi-Agent Tutorial",
         "type": "Tutorial Técnico (Gratis)",
         "link": "https://langchain-ai.github.io/langgraph/tutorials/multi_agent/multi-agent-collaboration/",
-        "description": "Guía abierta sobre cómo programar un sistema donde un 'Agente Médico Consultor' y un 'Agente Farmacológico' dialogan entre ellos sin coste."
+        "description": "Guía abierta sobre cómo programar un sistema donde un 'Agente Médico Consultor' y un 'Agente Farmacológico' dialogan entre ellos sin coste.",
+        "lang": "es"
       }
     ]
   },
@@ -483,19 +515,22 @@ export const curriculum = [
         "name": "Anthropic Claude Prompt Engineering",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=Anthropic+Claude+Prompt+Engineering+tutorial+xml+tags",
-        "description": "Tutoriales en vídeo enseñando las técnicas avanzadas que usamos para controlar alucinaciones en modelos súper inteligentes."
+        "description": "Tutoriales en vídeo enseñando las técnicas avanzadas que usamos para controlar alucinaciones en modelos súper inteligentes.",
+        "lang": "en"
       },
       {
         "name": "Model Context Protocol (MCP)",
         "type": "Estándar Oficial (Open-Source)",
         "link": "https://modelcontextprotocol.io/",
-        "description": "Documentación libre de este protocolo que nos permite conectar modelos a bases de datos SQLite locales médicas de forma segura."
+        "description": "Documentación libre de este protocolo que nos permite conectar modelos a bases de datos SQLite locales médicas de forma segura.",
+        "lang": "es"
       },
       {
         "name": "Anthropic Prompt Engineering Tutorial",
         "type": "Repositorio Interactivo (Gratis)",
         "link": "https://github.com/anthropics/courses",
-        "description": "Material abierto de los creadores de Claude para aprender a domar el modelo usando etiquetas <xml> y contexto infalible (vital en salud)."
+        "description": "Material abierto de los creadores de Claude para aprender a domar el modelo usando etiquetas <xml> y contexto infalible (vital en salud).",
+        "lang": "es"
       }
     ]
   },
@@ -536,19 +571,22 @@ export const curriculum = [
         "name": "LLM Security & Prompt Injection Mitigation",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=LLM+Security+Prompt+Injection+defense",
-        "description": "Charlas técnicas en YouTube sobre cómo un hacker o usuario puede engañar a un chat clínico y cómo defender tus sistemas usando la guía OWASP."
+        "description": "Charlas técnicas en YouTube sobre cómo un hacker o usuario puede engañar a un chat clínico y cómo defender tus sistemas usando la guía OWASP.",
+        "lang": "en"
       },
       {
         "name": "OWASP Top 10 for LLMs",
         "type": "Seguridad Informática (Gratis)",
         "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
-        "description": "La guía de la fundación OWASP (totalmente pública) para evitar hackeos de 'Prompt Injection' en tus historiales médicos."
+        "description": "La guía de la fundación OWASP (totalmente pública) para evitar hackeos de 'Prompt Injection' en tus historiales médicos.",
+        "lang": "es"
       },
       {
         "name": "LangSmith Evaluation Cookbook",
         "type": "Métricas de Control (Gratis)",
         "link": "https://docs.smith.langchain.com/evaluation",
-        "description": "Manual abierto para implementar métricas. Si la IA contesta 1,000 preguntas de pacientes, ¿cómo auditas gratuitamente que no haya errores?"
+        "description": "Manual abierto para implementar métricas. Si la IA contesta 1,000 preguntas de pacientes, ¿cómo auditas gratuitamente que no haya errores?",
+        "lang": "es"
       }
     ]
   },
@@ -589,19 +627,22 @@ export const curriculum = [
         "name": "Explainable AI (SHAP & LIME) in Python",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=Explainable+AI+SHAP+Python+tutorial",
-        "description": "Aprende gratis en vídeo a programar gráficos que explican visualmente a un médico por qué el modelo tomó una decisión."
+        "description": "Aprende gratis en vídeo a programar gráficos que explican visualmente a un médico por qué el modelo tomó una decisión.",
+        "lang": "en"
       },
       {
         "name": "DECIDE-AI Guidelines (Nature)",
         "type": "Publicación de Referencia (Gratis)",
         "link": "https://www.nature.com/articles/s41591-022-01772-9",
-        "description": "Directrices públicas de la Universidad de Oxford para hacer estudios clínicos validando que usar un modelo de IA es mejor que no usarlo."
+        "description": "Directrices públicas de la Universidad de Oxford para hacer estudios clínicos validando que usar un modelo de IA es mejor que no usarlo.",
+        "lang": "es"
       },
       {
         "name": "SHAP Python Library",
         "type": "Librería de Explicabilidad (Gratis)",
         "link": "https://shap.readthedocs.io/",
-        "description": "Librería de código abierto para crear gráficos (gratis) que expliquen por qué el modelo tomó una decisión médica concreta."
+        "description": "Librería de código abierto para crear gráficos (gratis) que expliquen por qué el modelo tomó una decisión médica concreta.",
+        "lang": "es"
       }
     ]
   },
@@ -642,19 +683,22 @@ export const curriculum = [
         "name": "EU AI Act Explained for Tech Builders",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/results?search_query=EU+AI+Act+Explained+Healthcare+Artificial+Intelligence",
-        "description": "Conferencias en YouTube resumiendo la ley europea de IA para saber qué necesitas si vas a instalar software en tu hospital."
+        "description": "Conferencias en YouTube resumiendo la ley europea de IA para saber qué necesitas si vas a instalar software en tu hospital.",
+        "lang": "en"
       },
       {
         "name": "EU AI Act Compliance (MedTech)",
         "type": "Guía Jurídica (PDF Gratis)",
         "link": "https://www.medtecheurope.org/wp-content/uploads/2023/10/MedTech-Europe-QA-on-the-AI-Act.pdf",
-        "description": "Documento público que explica cómo homologar un modelo de Inteligencia Artificial como Dispositivo Médico en Europa."
+        "description": "Documento público que explica cómo homologar un modelo de Inteligencia Artificial como Dispositivo Médico en Europa.",
+        "lang": "es"
       },
       {
         "name": "Microsoft Presidio (Anonimización)",
         "type": "Toolkit en Python (Open-Source)",
         "link": "https://microsoft.github.io/presidio/",
-        "description": "Herramienta gratuita de Microsoft para tapar DNIs, direcciones y nombres de pacientes en texto libre antes de la nube."
+        "description": "Herramienta gratuita de Microsoft para tapar DNIs, direcciones y nombres de pacientes en texto libre antes de la nube.",
+        "lang": "es"
       }
     ]
   },
@@ -695,25 +739,29 @@ export const curriculum = [
         "name": "FastAPI Course for Beginners",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=0sOvCWFmrtA",
-        "description": "Tutorial completo y directo de FreeCodeCamp para envolver tus modelos de Python en APIs accesibles por web."
+        "description": "Tutorial completo y directo de FreeCodeCamp para envolver tus modelos de Python en APIs accesibles por web.",
+        "lang": "en"
       },
       {
         "name": "Docker Tutorial for Beginners",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=pTFZFxd4hOI",
-        "description": "El famoso vídeo animado de TechWorld with Nana explicando en 1 hora cómo funciona Docker y cómo encapsular apps médicas."
+        "description": "El famoso vídeo animado de TechWorld with Nana explicando en 1 hora cómo funciona Docker y cómo encapsular apps médicas.",
+        "lang": "en"
       },
       {
         "name": "FastAPI Crash Course",
         "type": "Curso YouTube (Gratis)",
         "link": "https://www.youtube.com/watch?v=0sOvCWFmrtA",
-        "description": "Aprende gratis a usar FastAPI en Python para abrir un 'puerto' que permita conectar tu IA a webs médicas."
+        "description": "Aprende gratis a usar FastAPI en Python para abrir un 'puerto' que permita conectar tu IA a webs médicas.",
+        "lang": "es"
       },
       {
         "name": "Docker en 1 Hora",
         "type": "Curso YouTube (Gratis)",
         "link": "https://www.youtube.com/watch?v=3c-iBn73dDE",
-        "description": "Aprende gratis cómo meter tu aplicación entera (Python + Base de Datos + IA) en un contendor Docker universal."
+        "description": "Aprende gratis cómo meter tu aplicación entera (Python + Base de Datos + IA) en un contendor Docker universal.",
+        "lang": "es"
       }
     ]
   },
@@ -749,25 +797,29 @@ export const curriculum = [
         "name": "Trello 101: Full Guide for Beginners",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=xky48zyL9iA",
-        "description": "Aprende a usar Trello desde cero para organizar cualquier tipo de proyecto médico o personal."
+        "description": "Aprende a usar Trello desde cero para organizar cualquier tipo de proyecto médico o personal.",
+        "lang": "en"
       },
       {
         "name": "Mind Mapping for Scientists & Researchers",
         "type": "YouTube (Inglés)",
         "link": "https://www.youtube.com/watch?v=kYNooN289O8",
-        "description": "Cómo usar mapas mentales para estructurar tesis, papers o nuevos proyectos de software clínico."
+        "description": "Cómo usar mapas mentales para estructurar tesis, papers o nuevos proyectos de software clínico.",
+        "lang": "en"
       },
       {
         "name": "XMind: The Most Popular Mind Mapping Tool",
         "type": "Herramienta (Gratis)",
         "link": "https://xmind.app/",
-        "description": "Software profesional para crear mapas mentales estructurados y visualmente potentes."
+        "description": "Software profesional para crear mapas mentales estructurados y visualmente potentes.",
+        "lang": "es"
       },
       {
         "name": "Trello Official Guide",
         "type": "Guía Oficial (Gratis)",
         "link": "https://trello.com/guide",
-        "description": "Manual paso a paso de Atlassian para dominar los tableros, listas y tarjetas de Trello."
+        "description": "Manual paso a paso de Atlassian para dominar los tableros, listas y tarjetas de Trello.",
+        "lang": "es"
       }
     ]
   },
@@ -803,31 +855,36 @@ export const curriculum = [
         "name": "Two Minute Papers",
         "type": "Canal de YouTube (Inglés)",
         "link": "https://www.youtube.com/c/TwoMinutePapers",
-        "description": "El canal divulgativo más alucinante (con millones de suscriptores) que expone en vídeos de 5 minutos las increíbles capacidades de los últimos papers científicos de IA."
+        "description": "El canal divulgativo más alucinante (con millones de suscriptores) que expone en vídeos de 5 minutos las increíbles capacidades de los últimos papers científicos de IA.",
+        "lang": "en"
       },
       {
         "name": "AI Explained",
         "type": "Canal de YouTube (Inglés)",
         "link": "https://www.youtube.com/c/AIExplained",
-        "description": "Si sale un nuevo modelo hoy (ej. GPT-5), mañana este canal sube el análisis más exhaustivo, técnico e imparcial que vas a encontrar en video."
+        "description": "Si sale un nuevo modelo hoy (ej. GPT-5), mañana este canal sube el análisis más exhaustivo, técnico e imparcial que vas a encontrar en video.",
+        "lang": "en"
       },
       {
         "name": "Eric Topol - Ground Truths",
         "type": "Newsletter (Edición Gratis)",
         "link": "https://erictopol.substack.com/",
-        "description": "El cardiólogo y editor en jefe de Medscape disecciona la IA médica. Su contenido público es el mejor análisis del mundo."
+        "description": "El cardiólogo y editor en jefe de Medscape disecciona la IA médica. Su contenido público es el mejor análisis del mundo.",
+        "lang": "es"
       },
       {
         "name": "The Rundown AI",
         "type": "Boletín Diario (Gratis)",
         "link": "https://www.therundown.ai/",
-        "description": "Email gratuito cada mañana con el resumen visual del ecosistema y los nuevos modelos presentados anoche. Esencial para no quedarse atrás."
+        "description": "Email gratuito cada mañana con el resumen visual del ecosistema y los nuevos modelos presentados anoche. Esencial para no quedarse atrás.",
+        "lang": "es"
       },
       {
         "name": "Hugging Face Daily Papers",
         "type": "Repositorio Científico Vivo (Gratis)",
         "link": "https://huggingface.co/papers",
-        "description": "La biblioteca abierta más grande del mundo. Mira gratis los papers científicos literales votados por investigadores de IA cada día."
+        "description": "La biblioteca abierta más grande del mundo. Mira gratis los papers científicos literales votados por investigadores de IA cada día.",
+        "lang": "es"
       }
     ]
   }
