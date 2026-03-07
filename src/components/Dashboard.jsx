@@ -2,37 +2,81 @@ import React, { useState, useEffect } from 'react';
 import { curriculum } from '../data/curriculum';
 import ModuleCard from './ModuleCard';
 import confetti from 'canvas-confetti';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 import { signOut } from 'firebase/auth';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const Dashboard = ({ user }) => {
-    const [data, setData] = useState(() => {
-        const saved = localStorage.getItem('ai-study-progress-2026');
-        if (saved) {
-            const parsedSaved = JSON.parse(saved);
-            // Merge saved progress with any new curriculum additions
-            const merged = curriculum.map(module => {
-                const savedModule = parsedSaved.find(m => m.id === module.id);
-                if (savedModule) {
-                    return {
-                        ...module,
-                        topics: module.topics.map(topic => {
-                            const savedTopic = savedModule.topics.find(t => t.id === topic.id);
-                            return savedTopic ? { ...topic, completed: savedTopic.completed } : topic;
-                        })
-                    };
-                }
-                return module; // New module
-            });
-            return merged;
-        }
-        return curriculum;
-    });
+    const [data, setData] = useState(curriculum);
+    const [isLoadingData, setIsLoadingData] = useState(true);
     const [showCertificate, setShowCertificate] = useState(false);
 
+    // Fetch progress from Firestore on load
     useEffect(() => {
-        localStorage.setItem('ai-study-progress-2026', JSON.stringify(data));
-    }, [data]);
+        const fetchProgress = async () => {
+            if (!user) return;
+            try {
+                const docRef = doc(db, 'userProgress', user.uid);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    // Load from cloud
+                    const savedData = docSnap.data().progress;
+
+                    // Merge cloud progress with current curriculum (in case curriculum changed)
+                    const merged = curriculum.map(module => {
+                        const savedModule = savedData.find(m => m.id === module.id);
+                        if (savedModule) {
+                            return {
+                                ...module,
+                                topics: module.topics.map(topic => {
+                                    const savedTopic = savedModule.topics.find(t => t.id === topic.id);
+                                    return savedTopic ? { ...topic, completed: savedTopic.completed } : topic;
+                                })
+                            };
+                        }
+                        return module; // New module
+                    });
+                    setData(merged);
+                } else {
+                    // First time login - Check if they have local progress to migrate
+                    const localSaved = localStorage.getItem('ai-study-progress-2026');
+                    if (localSaved) {
+                        const parsedSaved = JSON.parse(localSaved);
+                        // Save local to cloud immediately
+                        await setDoc(docRef, { progress: parsedSaved, email: user.email }, { merge: true });
+                        setData(parsedSaved);
+                    } else {
+                        // Start fresh
+                        await setDoc(docRef, { progress: curriculum, email: user.email }, { merge: true });
+                        setData(curriculum);
+                    }
+                }
+            } catch (error) {
+                console.error("Error fetching progress from cloud:", error);
+            } finally {
+                setIsLoadingData(false);
+            }
+        };
+
+        fetchProgress();
+    }, [user]);
+
+    // Save to Firestore whenever data changes
+    useEffect(() => {
+        const saveProgress = async () => {
+            if (!user || isLoadingData) return; // Don't save while initially loading
+            try {
+                const docRef = doc(db, 'userProgress', user.uid);
+                await setDoc(docRef, { progress: data, lastUpdated: new Date() }, { merge: true });
+                // Also update local storage as a fallback/offline cache
+                localStorage.setItem('ai-study-progress-2026', JSON.stringify(data));
+            } catch (error) {
+                console.error("Error saving progress to cloud:", error);
+            }
+        };
+        saveProgress();
+    }, [data, user, isLoadingData]);
 
     const handleToggleTopic = (moduleId, topicId) => {
         setData(prevData => {
