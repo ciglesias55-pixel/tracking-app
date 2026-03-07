@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { curriculum } from '../data/curriculum';
 import ModuleCard from './ModuleCard';
 import confetti from 'canvas-confetti';
+import { auth } from '../firebase';
+import { signOut } from 'firebase/auth';
 
-const Dashboard = () => {
+const Dashboard = ({ user }) => {
     const [data, setData] = useState(() => {
         const saved = localStorage.getItem('ai-study-progress-2026');
         if (saved) {
@@ -78,6 +80,31 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
+            <div style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1rem',
+                fontSize: '0.9rem',
+                color: 'var(--text-secondary)'
+            }}>
+                <span>Dr. {user?.email}</span>
+                <button
+                    onClick={() => signOut(auth)}
+                    style={{
+                        background: 'rgba(255,255,255,0.1)',
+                        border: '1px solid var(--glass-border)',
+                        color: 'white',
+                        padding: '0.4rem 0.8rem',
+                        borderRadius: '8px',
+                        cursor: 'pointer',
+                        fontSize: '0.8rem'
+                    }}
+                >
+                    Cerrar Sesión
+                </button>
+            </div>
             <header style={{ marginBottom: '3rem', textAlign: 'center' }}>
                 <h1 style={{ fontSize: '3rem', background: 'var(--accent-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', marginBottom: '0.5rem', lineHeight: '1.2' }}>
                     Fellowship Bisvo with your proper mecabisvo 2026
