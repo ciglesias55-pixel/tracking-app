@@ -8,7 +8,18 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Verificamos si las llaves de Firebase ya han sido puestas o si siguen siendo placeholders
+  const isFirebaseConfigured = !import.meta.env.VITE_FIREBASE_API_KEY || !import.meta.env.VITE_FIREBASE_API_KEY.includes('REPLACE_');
+  // En este caso, como las pusimos en firebase.js directamente:
+  const hasKeys = !auth.config?.apiKey?.includes('REPLACE_');
+
   useEffect(() => {
+    // Si no hay llaves reales, dejamos de cargar inmediatamente para mostrar el dashboard
+    if (auth.config?.apiKey?.includes('REPLACE_')) {
+      setLoading(false);
+      return;
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
@@ -24,9 +35,12 @@ function App() {
     );
   }
 
+  // Si no hay llaves reales puestas, entramos directamente (Bypass de emergencia)
+  const showDashboard = user || auth.config?.apiKey?.includes('REPLACE_');
+
   return (
     <div className="app-container">
-      {user ? <Dashboard user={user} /> : <Login />}
+      {showDashboard ? <Dashboard user={user} /> : <Login />}
     </div>
   );
 }
