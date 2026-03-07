@@ -8,12 +8,13 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const Dashboard = ({ user }) => {
     const [data, setData] = useState(curriculum);
+    const [notes, setNotes] = useState({}); // Stores { moduleId: "note text" }
     const [isLoadingData, setIsLoadingData] = useState(true);
     const [showCertificate, setShowCertificate] = useState(false);
 
-    // Fetch progress from Firestore on load
+    // Fetch progress and notes from Firestore on load
     useEffect(() => {
-        const fetchProgress = async () => {
+        const fetchData = async () => {
             if (!user) return;
             try {
                 const docRef = doc(db, 'userProgress', user.uid);
@@ -21,7 +22,11 @@ const Dashboard = ({ user }) => {
 
                 if (docSnap.exists()) {
                     // Load from cloud
-                    const savedData = docSnap.data().progress;
+                    const cloudData = docSnap.data();
+                    const savedData = cloudData.progress || [];
+                    const savedNotes = cloudData.notes || {};
+
+                    setNotes(savedNotes);
 
                     // Merge cloud progress with current curriculum (in case curriculum changed)
                     const merged = curriculum.map(module => {
@@ -39,44 +44,55 @@ const Dashboard = ({ user }) => {
                     });
                     setData(merged);
                 } else {
-                    // First time login - Check if they have local progress to migrate
+                    // First time login - Check local progress
                     const localSaved = localStorage.getItem('ai-study-progress-2026');
+                    const localNotes = localStorage.getItem('ai-study-notes-2026');
+
+                    let initialData = curriculum;
+                    let initialNotes = {};
+
                     if (localSaved) {
-                        const parsedSaved = JSON.parse(localSaved);
-                        // Save local to cloud immediately
-                        await setDoc(docRef, { progress: parsedSaved, email: user.email }, { merge: true });
-                        setData(parsedSaved);
-                    } else {
-                        // Start fresh
-                        await setDoc(docRef, { progress: curriculum, email: user.email }, { merge: true });
-                        setData(curriculum);
+                        initialData = JSON.parse(localSaved);
                     }
+                    if (localNotes) {
+                        initialNotes = JSON.parse(localNotes);
+                    }
+
+                    // Save local to cloud immediately
+                    await setDoc(docRef, { progress: initialData, notes: initialNotes, email: user.email }, { merge: true });
+                    setData(initialData);
+                    setNotes(initialNotes);
                 }
             } catch (error) {
-                console.error("Error fetching progress from cloud:", error);
+                console.error("Error fetching data from cloud:", error);
             } finally {
                 setIsLoadingData(false);
             }
         };
 
-        fetchProgress();
+        fetchData();
     }, [user]);
 
-    // Save to Firestore whenever data changes
+    // Save progress and notes to Firestore whenever they change
     useEffect(() => {
-        const saveProgress = async () => {
+        const saveData = async () => {
             if (!user || isLoadingData) return; // Don't save while initially loading
             try {
                 const docRef = doc(db, 'userProgress', user.uid);
-                await setDoc(docRef, { progress: data, lastUpdated: new Date() }, { merge: true });
+                await setDoc(docRef, { progress: data, notes: notes, lastUpdated: new Date() }, { merge: true });
                 // Also update local storage as a fallback/offline cache
                 localStorage.setItem('ai-study-progress-2026', JSON.stringify(data));
+                localStorage.setItem('ai-study-notes-2026', JSON.stringify(notes));
             } catch (error) {
-                console.error("Error saving progress to cloud:", error);
+                console.error("Error saving data to cloud:", error);
             }
         };
-        saveProgress();
-    }, [data, user, isLoadingData]);
+        saveData();
+    }, [data, notes, user, isLoadingData]);
+
+    const handleUpdateNote = (moduleId, newText) => {
+        setNotes(prev => ({ ...prev, [moduleId]: newText }));
+    };
 
     const handleToggleTopic = (moduleId, topicId) => {
         setData(prevData => {
@@ -193,7 +209,13 @@ const Dashboard = ({ user }) => {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                 {data.map(module => (
-                    <ModuleCard key={module.id} module={module} onToggleTopic={handleToggleTopic} />
+                    <ModuleCard
+                        key={module.id}
+                        module={module}
+                        onToggleTopic={handleToggleTopic}
+                        note={notes[module.id] || ''}
+                        onUpdateNote={(newText) => handleUpdateNote(module.id, newText)}
+                    />
                 ))}
             </div>
 

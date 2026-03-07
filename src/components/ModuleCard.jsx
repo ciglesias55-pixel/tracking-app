@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ModuleCard = ({ module, onToggleTopic }) => {
+const ModuleCard = ({ module, onToggleTopic, note, onUpdateNote }) => {
     const completedCount = module.topics.filter(t => t.completed).length;
     const progress = (completedCount / module.topics.length) * 100;
-    const [searchMenuOpen, setSearchMenuOpen] = React.useState(null);
+    const [searchMenuOpen, setSearchMenuOpen] = useState(null);
+    const [localNote, setLocalNote] = useState(note || '');
+    const [isSaving, setIsSaving] = useState(false);
+    const [saveTimer, setSaveTimer] = useState(null);
+
+    // Sync local state if parent prop changes (e.g. initial load)
+    useEffect(() => {
+        setLocalNote(note || '');
+    }, [note]);
+
+    const handleNoteChange = (e) => {
+        const text = e.target.value;
+        setLocalNote(text);
+        setIsSaving(true);
+
+        // Clear existing timer
+        if (saveTimer) clearTimeout(saveTimer);
+
+        // Set a new timer to save after 1 second of inactivity (debounce)
+        const timer = setTimeout(() => {
+            onUpdateNote(text);
+            setIsSaving(false);
+        }, 1000);
+
+        setSaveTimer(timer);
+    };
 
     const handleSearch = (topicTitle, lang) => {
         const cleanTitle = topicTitle.replace(/💻 Proyecto: |📡 /g, '').trim();
@@ -168,6 +193,44 @@ const ModuleCard = ({ module, onToggleTopic }) => {
                         </div>
                     </div>
                 )}
+            </div>
+
+            {/* Personal Notes Section */}
+            <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
+                    <h4 style={{ margin: 0, fontSize: '0.9rem', color: 'var(--accent-color)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        ✍️ Mis Apuntes
+                    </h4>
+                    <span style={{
+                        fontSize: '0.75rem',
+                        color: isSaving ? 'var(--accent-color)' : 'var(--text-secondary)',
+                        opacity: isSaving ? 1 : 0.5,
+                        transition: 'opacity 0.3s'
+                    }}>
+                        {isSaving ? 'Guardando en la nube...' : (localNote ? 'Guardado ✅' : '')}
+                    </span>
+                </div>
+                <textarea
+                    value={localNote}
+                    onChange={handleNoteChange}
+                    placeholder="Escribe aquí tus ideas, aprendizajes clave o dudas sobre este módulo..."
+                    style={{
+                        width: '100%',
+                        minHeight: '120px',
+                        background: 'rgba(0,0,0,0.2)',
+                        border: '1px solid var(--glass-border)',
+                        borderRadius: '8px',
+                        padding: '1rem',
+                        color: 'var(--text-primary)',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5',
+                        resize: 'vertical',
+                        outline: 'none',
+                        transition: 'border-color 0.3s'
+                    }}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--accent-color)'}
+                    onBlur={(e) => e.target.style.borderColor = 'var(--glass-border)'}
+                />
             </div>
         </div>
     );
