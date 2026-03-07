@@ -6,6 +6,7 @@ const Login = ({ onLoginSuccess }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
@@ -59,14 +60,38 @@ const Login = ({ onLoginSuccess }) => {
                         required
                         className="glass-input"
                     />
-                    <input
-                        type="password"
-                        placeholder="Contraseña"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        className="glass-input"
-                    />
+                    <div style={{ position: 'relative', width: '100%' }}>
+                        <input
+                            type={showPassword ? 'text' : 'password'}
+                            placeholder="Contraseña"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            className="glass-input"
+                            style={{ width: '100%', paddingRight: '2.5rem' }}
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            style={{
+                                position: 'absolute',
+                                right: '10px',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                padding: '5px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}
+                            title={showPassword ? "Ocultar Contraseña" : "Ver Contraseña"}
+                        >
+                            {showPassword ? '👁️‍🗨️' : '👁️'}
+                        </button>
+                    </div>
 
                     {error && <p style={{ color: '#ff4b2b', fontSize: '0.9rem' }}>{error}</p>}
 
