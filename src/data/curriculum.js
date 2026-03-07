@@ -33,6 +33,18 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "Python for Beginners - Full Course",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=eWRfhZUzrAc",
+        "description": "Curso completo y gratuito de FreeCodeCamp (más de 40M de visitas) para aprender Python desde absoluto cero."
+      },
+      {
+        "name": "Cursor IDE: Complete AI Developer Guide",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=cursor+ide+full+tutorial+course",
+        "description": "Búsqueda directa de los mejores tutoriales en YouTube sobre cómo configurar Cursor para programar aplicaciones completas."
+      },
+      {
         "name": "Harvard CS50P: Introducción a Python",
         "type": "Curso Universitario (Gratis)",
         "link": "https://cs50.harvard.edu/python/",
@@ -86,6 +98,18 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "n8n Crash Course for Beginners",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=1_N9JcEw-4c",
+        "description": "Guía visual rápida en YouTube sobre cómo conectar aplicaciones y automatizar tareas sin escribir código usando n8n."
+      },
+      {
+        "name": "OpenAI Assistants API Masterclass",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=openai+assistants+api+tutorial+python",
+        "description": "Tutoriales en vídeo para construir agentes médicos que pueden recordar conversaciones y usar herramientas externas."
+      },
+      {
         "name": "n8n Academy: Curso de Principiantes",
         "type": "Academia Oficial (Gratis)",
         "link": "https://academy.n8n.io/paths/beginners",
@@ -128,6 +152,12 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "GPT-4 Vision & Audio API in Python",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=gpt4+vision+audio+api+python+tutorial",
+        "description": "Aprende paso a paso en YouTube cómo enviar radiografías o notas de voz a los modelos de lenguaje a través de código."
+      },
+      {
         "name": "OpenAI Vision Cookbook",
         "type": "Recetario Práctico (Gratis)",
         "link": "https://cookbook.openai.com/examples/using_gpt4_vision_with_the_assistants_api",
@@ -169,6 +199,18 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "Let's build GPT: from scratch, in code",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+        "description": "La legendaria clase magistral de Andrej Karpathy (ex-director de IA en Tesla) construyendo un Transformer neuronal desde cero."
+      },
+      {
+        "name": "LangChain & Vector Databases Full Course",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=TRjq7t2Ms5I",
+        "description": "Curso masivo de FreeCodeCamp (18 horas) enseñando paso a paso arquitectura RAG para conectar LLMs con documentos privados."
+      },
       {
         "name": "Hugging Face NLP Course",
         "type": "Curso Magistral (Gratis)",
@@ -218,6 +260,12 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "Synthetic Data Generation with Python",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=synthetic+data+generation+machine+learning+python",
+        "description": "Charlas y tutoriales técnicos explicando cómo usar GANs y VAEs para generar pacientes ficticios por motivos de privacidad."
+      },
+      {
         "name": "Synthea: Pacientes Sintéticos (MIT)",
         "type": "Herramienta Open-Source (Gratis)",
         "link": "https://github.com/synthetichealth/synthea/wiki",
@@ -259,6 +307,18 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "AI in Healthcare (Stanford University)",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=l_B-mD1h03M",
+        "description": "Excelente material de Stanford Medicine sobre los retos reales de aplicar Machine Learning dentro de un hospital."
+      },
+      {
+        "name": "AI for Medicine Course Overview",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=coursera+ai+for+medicine+specialization",
+        "description": "Vídeos explicativos y lecciones sueltas sobre las matemáticas de diagnosticar con imágenes y análisis de supervivencia."
+      },
       {
         "name": "Coursera: AI for Medicine",
         "type": "Auditoría de Curso (Gratis)",
@@ -308,6 +368,12 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "Vector Databases Explained in 5 Minutes",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=klTvEwg3oJ4",
+        "description": "Un resumen visual espectacular de Pinecone explicando por qué la IA necesita almacenar datos en formato de vectores matemáticos."
+      },
+      {
         "name": "Pinecone Vector Center",
         "type": "Conceptos Fundamentales (Gratis)",
         "link": "https://www.pinecone.io/learn/",
@@ -354,6 +420,18 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "Andrew Ng: Agentic AI Workflows",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=sal78ACtGTc",
+        "description": "Charla imperdible del padre de la IA moderna explicando por qué cuatro agentes pequeños trabajando en equipo ganan a un LLM gigante."
+      },
+      {
+        "name": "LangGraph Multi-Agent Workflows",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=langgraph+multi+agent+tutorial",
+        "description": "Búsqueda con los mejores vídeos para aprender a programar sistemas donde agentes debaten entre sí antes de dar una respuesta."
+      },
       {
         "name": "Building Effective Agents (Anthropic)",
         "type": "Paper de Arquitectura (Gratis)",
@@ -402,6 +480,12 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "Anthropic Claude Prompt Engineering",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=Anthropic+Claude+Prompt+Engineering+tutorial+xml+tags",
+        "description": "Tutoriales en vídeo enseñando las técnicas avanzadas que usamos para controlar alucinaciones en modelos súper inteligentes."
+      },
+      {
         "name": "Model Context Protocol (MCP)",
         "type": "Estándar Oficial (Open-Source)",
         "link": "https://modelcontextprotocol.io/",
@@ -448,6 +532,12 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "LLM Security & Prompt Injection Mitigation",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=LLM+Security+Prompt+Injection+defense",
+        "description": "Charlas técnicas en YouTube sobre cómo un hacker o usuario puede engañar a un chat clínico y cómo defender tus sistemas usando la guía OWASP."
+      },
       {
         "name": "OWASP Top 10 for LLMs",
         "type": "Seguridad Informática (Gratis)",
@@ -496,6 +586,12 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "Explainable AI (SHAP & LIME) in Python",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=Explainable+AI+SHAP+Python+tutorial",
+        "description": "Aprende gratis en vídeo a programar gráficos que explican visualmente a un médico por qué el modelo tomó una decisión."
+      },
+      {
         "name": "DECIDE-AI Guidelines (Nature)",
         "type": "Publicación de Referencia (Gratis)",
         "link": "https://www.nature.com/articles/s41591-022-01772-9",
@@ -542,6 +638,12 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "EU AI Act Explained for Tech Builders",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/results?search_query=EU+AI+Act+Explained+Healthcare+Artificial+Intelligence",
+        "description": "Conferencias en YouTube resumiendo la ley europea de IA para saber qué necesitas si vas a instalar software en tu hospital."
+      },
       {
         "name": "EU AI Act Compliance (MedTech)",
         "type": "Guía Jurídica (PDF Gratis)",
@@ -590,6 +692,18 @@ export const curriculum = [
     ],
     "resources": [
       {
+        "name": "FastAPI Course for Beginners",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=0sOvCWFmrtA",
+        "description": "Tutorial completo y directo de FreeCodeCamp para envolver tus modelos de Python en APIs accesibles por web."
+      },
+      {
+        "name": "Docker Tutorial for Beginners",
+        "type": "YouTube (Inglés)",
+        "link": "https://www.youtube.com/watch?v=pTFZFxd4hOI",
+        "description": "El famoso vídeo animado de TechWorld with Nana explicando en 1 hora cómo funciona Docker y cómo encapsular apps médicas."
+      },
+      {
         "name": "FastAPI Crash Course",
         "type": "Curso YouTube (Gratis)",
         "link": "https://www.youtube.com/watch?v=0sOvCWFmrtA",
@@ -631,6 +745,18 @@ export const curriculum = [
       }
     ],
     "resources": [
+      {
+        "name": "Two Minute Papers",
+        "type": "Canal de YouTube (Inglés)",
+        "link": "https://www.youtube.com/c/TwoMinutePapers",
+        "description": "El canal divulgativo más alucinante (con millones de suscriptores) que expone en vídeos de 5 minutos las increíbles capacidades de los últimos papers científicos de IA."
+      },
+      {
+        "name": "AI Explained",
+        "type": "Canal de YouTube (Inglés)",
+        "link": "https://www.youtube.com/c/AIExplained",
+        "description": "Si sale un nuevo modelo hoy (ej. GPT-5), mañana este canal sube el análisis más exhaustivo, técnico e imparcial que vas a encontrar en video."
+      },
       {
         "name": "Eric Topol - Ground Truths",
         "type": "Newsletter (Edición Gratis)",
